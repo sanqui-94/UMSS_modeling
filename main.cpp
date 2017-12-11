@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "models/Facultad.hpp"
+#include "models/Facultad.cpp"
 
 using namespace std;
 
