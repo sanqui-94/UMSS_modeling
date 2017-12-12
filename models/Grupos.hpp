@@ -1,3 +1,6 @@
+#ifndef GRRUPOS_HPP
+#define GRRUPOS_HPP 1
+
 #include "Grupo.hpp"
 #include "Gestion.hpp"
 
@@ -6,6 +9,7 @@ class Grupos {
 		vector<Grupo> grupos;
 		Gestion gestion;
 	public:
-		Grupos(Gestion gestion);
 		vector<Grupo> getGrupos();
 };
+
+#endif

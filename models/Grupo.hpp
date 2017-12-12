@@ -1,3 +1,6 @@
+#ifndef GRRUPO_HPP
+#define GRRUPO_HPP 1
+
 class Grupo {
 	private:
 		string nombre;
@@ -5,3 +8,5 @@ class Grupo {
 		Grupo(string nombre);
 		string getNombre();
 };
+
+#endif

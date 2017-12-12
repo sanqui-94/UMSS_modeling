@@ -1,7 +1,7 @@
 #include "Grupo.hpp"
 
-Grupo::Grupo(string nombre) {
-	this->nombre = nombre;
+Grupo::Grupo(string n = "") {
+	this->nombre = n;
 }
 
 string Grupo::getNombre() {

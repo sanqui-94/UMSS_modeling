@@ -1,7 +1,7 @@
 #include "Gestion.hpp"
 
-Gestion::Gestion(string nombre) {
-	this->nombre = nombre;
+Gestion::Gestion(string n = "") {
+	this->nombre = n;
 }
 string Gestion::getNombre() {
 	return this->nombre;
