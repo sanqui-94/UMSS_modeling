@@ -2,9 +2,9 @@
 
 
 TipoDocente::TipoDocente(){
-	tipo = '*';
+	tipo = "derp";
 }
 
-char TipoDocente::getTipo(){
+string TipoDocente::getTipo(){
 	return tipo;
 }

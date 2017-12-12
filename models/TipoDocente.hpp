@@ -1,12 +1,15 @@
 #ifndef TIPODOCENTE_HPP
 #define TIPODOCENTE_HPP 1
 
+#include "string"
+
+using namespace std;
+
 class TipoDocente{
-		char tipo;
+		string tipo;
 
 	public:
 		TipoDocente();
-		char getTipo();
-
+		string getTipo();
 };
 #endif
