@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
+using namespace std;
 #include "models/Facultad.cpp"
 #include "models/Grupos.cpp"
 
-using namespace std;
 
 int main() {
     Facultad f1("Ciencia y Tecnología");    
