@@ -5,9 +5,10 @@
 
 class Malla {
 	private:
-		std::vector<Nivel> niveles;
+		vector<Nivel> niveles;
 	public:
-		std::vector<Nivel> getNiveles();
+		vector<Nivel> getNiveles();
+		vector<Materia> toposort();
 };
 
 #endif

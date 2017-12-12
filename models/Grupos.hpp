@@ -4,6 +4,8 @@
 #include "Grupo.hpp"
 #include "Gestion.hpp"
 
+#include<vector>
+
 class Grupos {
 	private:
 		vector<Grupo> grupos;

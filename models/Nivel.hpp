@@ -1,11 +1,11 @@
 #ifndef NIVEL_HPP
 #define NIVEL_HPP 1
 
-#include "Materia.cpp"
+#include "Materia.hpp"
 
-bool operator < (const Materia &m1, const Materia &materia2) {
-	return m1.codigo < materia2.getCodigo();
-}
+#include<map>
+
+using namespace std;
 
 class Nivel {
 	private:
