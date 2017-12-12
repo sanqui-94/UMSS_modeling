@@ -1,5 +1,5 @@
 #ifndef FACULDAD_HPP
-#DEFINE FACULDAD_HPP 1
+#define FACULDAD_HPP 1
 
 using namespace std;
 
