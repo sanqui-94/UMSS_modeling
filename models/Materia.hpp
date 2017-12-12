@@ -6,7 +6,7 @@
 class Materia {
 	private:
 		int codigo;
-		string nombre
+		string nombre;
 		Grupos grupos;
 	public:
 		Materia(string n = "");

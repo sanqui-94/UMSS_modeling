@@ -1,20 +1,18 @@
 #ifndef NIVEL_HPP
 #define NIVEL_HPP 1
 
-#include "Materia.hpp"
+#include "Materia.cpp"
 
-struct Comparator {
-	bool operator() (const &Materia materia1, const &Materia materia2) const {
-		return materia1.getCodigo() < materia2.getCodigo();
-	}
-};
+bool operator < (const Materia &m1, const Materia &materia2) {
+	return m1.codigo < materia2.getCodigo();
+}
 
 class Nivel {
 	private:
 		string nivel;
-		map< Materia, vector<Materia>, Comparator> mapaMaterias;
+		map< Materia, vector<Materia> > mapaMaterias;
 	public:
-		Nivel(n = "");
+		Nivel(string n = "");
 		map< Materia, vector<Materia> > getMapaMaterias();
 };
 

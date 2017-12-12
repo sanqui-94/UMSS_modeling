@@ -11,3 +11,11 @@ string Materia::getNombre() {
 Grupos Matera::getGrupos() {
 	return grupos;
 }
+
+int Materia::getCodigo() {
+	return codigo;
+}
+
+bool Materia::operator <(Materia &otro) {
+	return codigo < otro.getCodigo();
+}
