@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "models/Facultad.cpp"
+#include "models/Grupos.cpp"
 
 using namespace std;
 
