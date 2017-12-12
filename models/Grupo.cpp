@@ -1,9 +1,9 @@
 #include "Grupo.hpp"
 
-Grupo::Grupo(string n = "") {
-	this->nombre = n;
+Grupo::Grupo(string n) {
+	nombre = n;
 }
 
 string Grupo::getNombre() {
-	return this->nombre;
+	return nombre;
 }

@@ -5,7 +5,7 @@ class Grupo {
 	private:
 		string nombre;
 	public:
-		Grupo(string nombre);
+		Grupo(string n = "");
 		string getNombre();
 };
 

@@ -5,7 +5,7 @@ class Gestion {
 	private:
 		string nombre;
 	public:
-		Gestion(string nombre);
+		Gestion(string n = "");
 		string getNombre();	
 };
 
