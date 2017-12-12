@@ -3,9 +3,12 @@
 
 #include "Materia.cpp"
 
-bool operator < (const Materia &m1, const Materia &materia2) {
+#include<map>
+
+using namespace std;
+/**bool operator < (const Materia &m1, const Materia &materia2) {
 	return m1.getCodigo() < materia2.getCodigo();
-}
+}**/
 
 class Nivel {
 	private:
