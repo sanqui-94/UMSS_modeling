@@ -5,6 +5,6 @@ Nivel::Nivel(char n) {
 	nivel = n;
 }
 
-std::map<Materia, std::vector<Materia>> getMapaMaterias() {
+std::map<Materia, std::vector<Materia> > getMapaMaterias() {
 	return mapaMaterias;
 }
