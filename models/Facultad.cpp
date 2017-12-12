@@ -1,6 +1,6 @@
 #include "Facultad.hpp"
 
-Facultad::Facultad(string n){
+Facultad::Facultad(string n = ""){
     nombre = n;
 }
 
