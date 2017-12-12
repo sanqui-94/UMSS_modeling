@@ -13,6 +13,7 @@ class Materia {
 		string getNombre();
 		Grupos getGrupos();
 		int getCodigo();
+		//bool Materia::operator <(Materia *otro);
 };
 
 #endif

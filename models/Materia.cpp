@@ -1,6 +1,6 @@
 #include "Materia.hpp"
 
-Matera::Materia(string n) {
+Materia::Materia(string n) {
 	nombre = n;
 }
 
@@ -8,14 +8,14 @@ string Materia::getNombre() {
 	return nombre;
 }
 
-Grupos Matera::getGrupos() {
+Grupos Materia::getGrupos() {
 	return grupos;
 }
 
 int Materia::getCodigo() {
 	return codigo;
 }
-
-bool Materia::operator <(Materia &otro) {
-	return codigo < otro.getCodigo();
-}
+/*
+bool Materia::operator <(Materia *otro) {
+	return codigo < otro->getCodigo();
+}*/

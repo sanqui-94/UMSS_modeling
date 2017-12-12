@@ -4,7 +4,7 @@
 #include "Materia.cpp"
 
 bool operator < (const Materia &m1, const Materia &materia2) {
-	return m1.codigo < materia2.getCodigo();
+	return m1.getCodigo() < materia2.getCodigo();
 }
 
 class Nivel {
