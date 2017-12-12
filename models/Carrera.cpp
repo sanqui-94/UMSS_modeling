@@ -1,9 +1,9 @@
-#include "Departamento.hpp"
+#include "Carrera.hpp"
 
-Departamento::Departamento(string n){
+Carrera::Carrera(string n){
     nombre = n;
 }
 
-string Departamento::getNombre() {
+string Carrera::getNombre() {
     return nombre;
 }

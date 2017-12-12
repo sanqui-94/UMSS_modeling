@@ -4,6 +4,7 @@
 class Facultad{
     private:
         string nombre;
+        vector<Departamento> departamentos;
     public:
         Facultad(string n = "");
         string getNombre();
