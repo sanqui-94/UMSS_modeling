@@ -5,7 +5,6 @@ using namespace std;
 #include "models/Carrera.cpp"
 #include "models/Departamento.cpp"
 #include "models/Facultad.cpp"
-#include "models/Grupos.cpp"
 
 int main() {
     Facultad f1("Ciencia y Tecnología");    
