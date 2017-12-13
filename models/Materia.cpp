@@ -15,7 +15,3 @@ Grupos Materia::getGrupos() {
 int Materia::getCodigo() {
 	return codigo;
 }
-/*
-bool Materia::operator <(Materia *otro) {
-	return codigo < otro->getCodigo();
-}*/
