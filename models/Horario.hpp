@@ -1,6 +1,10 @@
 #ifndef HORARIO_HPP
 #define HORARIO_HPP 1
 
+#include <string>
+
+using std::string;
+
 class Horario{
 	private:
 		string diaSemana;
