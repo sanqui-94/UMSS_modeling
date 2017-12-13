@@ -1,7 +1,7 @@
 #include <set>
 #include "Malla.hpp"
 
-vector<Materia> toposort() {
+vector<Materia> Malla::toposort() {
 	int vs = malla.size();
 	set<Materia> visitado;
 	vector<Materia> res;
@@ -13,7 +13,7 @@ vector<Materia> toposort() {
 	return res;
 }
 
-void visit(Materia *u, set<Materia> *visitados, vector<Materia> *res) {
+void Malla::visit(Materia *u, set<Materia> *visitados, vector<Materia> *res) {
 	visitados.insert(u);
 	vector<Materia> = malla[u]->second;
 	for (Materia &v : malla[u]->second)	{  
@@ -22,4 +22,21 @@ void visit(Materia *u, set<Materia> *visitados, vector<Materia> *res) {
 		}
 	}
 	res.push_back(u);
+}
+
+bool Malla::tieneChoques(string nivel) {
+	bool res = true;
+	for (map<Materia, pair <string, vector<Materia> > >:: it = malla.begin(); it != malla.end(); ++it) {
+		if(strncmp(nivel, ((it->second)->first)) {
+			vector<Materia> materias = (it->second)->second;
+			for (vector<Materia>::iterator it2 == materias.begin(); it2 != materias.end(); ++it2) {
+				for (vector<Materia>::iterator it3 == materias.begin(); it3 != materias.end(); ++it3) {
+					if(*it2 != *it3) {
+						res = res && ((it2->existeChoques(*it3)).size() > 0);
+					}
+				}
+			}
+		}
+	}
+	return res;
 }

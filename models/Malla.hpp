@@ -2,6 +2,8 @@
 #define MALLA_HPP 1
 
 #include "Materia.hpp"
+#include <set>
+#include <map>
 
 class Malla {
 	private:
@@ -9,6 +11,7 @@ class Malla {
 		void visit(Materia *u, set<Materia> *visitados, vector<Materia> *res);
 	public:
 		vector<Materia> toposort();
+		bool tieneChoques(string nivel);
 };
 
 #endif

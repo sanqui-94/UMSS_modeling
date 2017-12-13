@@ -3,7 +3,8 @@
 
 #include <string>
 #include "Grupo.hpp"
-#include "Hoario.hpp"
+#include "Horario.hpp"
+#include "Materia.hpp"
 
 using namespace std;
 
@@ -21,7 +22,7 @@ class Materia {
 		bool operator <(const Materia &otro) const {
 			return codigo < otro.codigo;
 		}
-		vector<Horario> existeChoques(&Materia otra);
+		vector<Horario> existeChoques(Materia &otra);
 };
 
 #endif
