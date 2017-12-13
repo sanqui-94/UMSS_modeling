@@ -12,10 +12,11 @@ class Materia {
 		string nombre;
 		vector<Grupo> grupos;
 	public:
-		Materia(string n = "");
+		Materia(string n = "", int c = 0);
 		string getNombre();
 		vector<Grupo> getGrupos();
 		int getCodigo();
+		bool operator ==(Materia &otro);
 		bool operator <(const Materia &otro) const {
 			return codigo < otro.codigo;
 		}
