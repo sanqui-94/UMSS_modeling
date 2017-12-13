@@ -1,13 +1,12 @@
 #ifndef MALLA_HPP
 #define MALLA_HPP 1
 
-#include "Nivel.hpp"
+#include "Materia.hpp"
 
 class Malla {
 	private:
-		vector<Nivel> niveles;
+		map<Materia, pair <string, vector<Materia> > > niveles;
 	public:
-		vector<Nivel> getNiveles();
 		vector<Materia> toposort();
 };
 
