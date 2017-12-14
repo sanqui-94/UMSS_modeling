@@ -17,7 +17,7 @@ class Materia {
 		string getNombre();
 		void agregarGrupo(Grupo &gr);
 		int getCodigo();
-		bool operator ==(Materia &otro);
+		bool operator ==(const Materia &otro);
 		bool operator <(const Materia &otro) const {
 			return codigo < otro.codigo;
 		}
