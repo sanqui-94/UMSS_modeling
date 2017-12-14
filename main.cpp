@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 using namespace std;
+#include "models/Malla.hpp"
 #include "models/Materia.hpp"
 #include "models/Horario.hpp"
 #include "models/Grupo.hpp"
@@ -66,6 +68,16 @@ int main() {
 	cout<<"Se espera 1, muestra: "<<(m3.existeChoques(m1)).size()<<"\n";
 	cout<<"Se espera 0, muestra: "<<(m1.existeChoques(m2)).size()<<"\n";
 	cout<<"Se espera 2, muestra: "<<(m1.existeChoques(m1)).size()<<"\n";
+
+	map<Materia, pair <string, vector<Materia> > > constructor;
+	vector<Materia> vacio;
+	constructor[m1] = make_pair("1", vacio);
+	constructor[m3] = make_pair("1", vacio);
+	constructor[m2] = make_pair("2", vacio);
+
+	Malla malla(constructor);
+	string res = (malla.tieneChoques("1")) ? "hay choque" : "no hay choque";
+	cout<<res<<"\n";
 
     return 0;
 }
