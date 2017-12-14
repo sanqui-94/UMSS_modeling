@@ -7,10 +7,10 @@
 
 class Malla {
 	private:
-		map<Materia, pair<string, vector<Materia>>> malla;
+		map<Materia, pair<string, vector<Materia> > > malla;
 		void visit(const Materia &u, set<Materia> &visitados, vector<Materia> &res);
 	public:
-		Malla(map<Materia, pair <string, vector<Materia> > > m);
+		Malla(map<Materia, pair <string, vector<Materia> > > m );
 		vector<Materia> toposort();
 		bool tieneChoques(string nivel);
 };

@@ -1,7 +1,7 @@
 #include <set>
 #include "Malla.hpp"
 
-Malla::Malla(map<Materia, pair<string, vector<Materia>>> m){
+Malla::Malla(map<Materia, pair<string, vector<Materia> > > m){
 	malla = m;
 }
 
@@ -9,7 +9,7 @@ vector<Materia> Malla::toposort() {
 	int vs = malla.size();
 	set<Materia> visitado;
 	vector<Materia> res;
-	for (map<Materia, pair<string, vector<Materia>>>::iterator it = malla.begin(); it != malla.end(); ++it)	{
+	for (map<Materia, pair<string, vector<Materia> > >::iterator it = malla.begin(); it != malla.end(); ++it)	{
 		if (visitado.find(it->first) == visitado.end()) {
 			visit(it->first, visitado, res);
 		}
