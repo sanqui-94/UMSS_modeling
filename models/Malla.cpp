@@ -26,15 +26,15 @@ void Malla::visit(const Materia &u, set<Materia> &visitados, vector<Materia> &re
 	}
 	res.push_back(u);
 }
-/*
+
 bool Malla::tieneChoques(string nivel) {
 	bool res = true;
 	for (map<Materia, pair <string, vector<Materia> > >::iterator it = malla.begin(); it != malla.end(); ++it) {
-		if(strncmp(nivel, ((it->second).first))) {
-			vector<Materia> materias = (it->second)->second;
-			for (vector<Materia>::iterator it2 == materias.begin(); it2 != materias.end(); ++it2) {
-				for (vector<Materia>::iterator it3 == materias.begin(); it3 != materias.end(); ++it3) {
-					if(*it2 != *it3) {
+		if( nivel.compare((it->second).first) != 0) {
+			vector<Materia> materias = (it->second).second;
+			for (vector<Materia>::iterator it2 = materias.begin(); it2 != materias.end(); ++it2) {
+				for (vector<Materia>::iterator it3 = materias.begin(); it3 != materias.end(); ++it3) {
+					if(!(*it2 == *it3)) {
 						res = res && ((it2->existeChoques(*it3)).size() > 0);
 					}
 				}
@@ -42,4 +42,4 @@ bool Malla::tieneChoques(string nivel) {
 		}
 	}
 	return res;
-}*/
+}
