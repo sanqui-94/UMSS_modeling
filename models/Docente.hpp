@@ -1,9 +1,16 @@
 #ifndef DOCENTE_HPP
 #define DOCENTE_HPP 1
 
+#include <cstddef>
+#include <iostream>
 #include "Cargo.hpp"
+#include "Persona.hpp"
+#include <string>
 
-class Docente {
+using std::string;
+
+
+class Docente: public Persona {
 	private:
 		string tipo;
 		int salario;
@@ -11,7 +18,7 @@ class Docente {
 		Cargo cargo;
 
 	public:
-		Docente();
+		Docente(string n, string a, char s);
 		int getSalario();
 		int getCargaHoraria();
 		string getTipo();

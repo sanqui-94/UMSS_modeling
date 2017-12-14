@@ -1,10 +1,11 @@
 #include "Docente.hpp"
 
-Docente::Docente(){
+Docente::Docente(string n, string a, char s): Persona(n,a,s){
 	salario = 42;
 	carga_horaria = 10;
 	tipo = "Regular";
-	cargo = nullptr;  
+	string vacio = "";
+	cargo; 
 }
 
 int Docente::getSalario(){
