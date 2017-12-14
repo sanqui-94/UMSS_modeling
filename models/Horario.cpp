@@ -11,6 +11,7 @@ bool Horario::tieneChoque(Horario &otro) {
 	if(diaSemana.compare(otro.diaSemana) == 0) {
 		existeChoque = 	(otro.horaFin > horaInicio && otro.horaFin < horaFin) ||
 						(otro.horaInicio > horaInicio && otro.horaInicio < horaFin) ||
+						(otro.horaInicio > horaInicio && otro.horaFin > horaFin)||
 						(horaInicio == otro.horaInicio && horaFin == otro.horaFin);
 			
 	}
