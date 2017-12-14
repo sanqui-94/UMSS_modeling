@@ -4,7 +4,6 @@
 #include <string>
 #include "Grupo.hpp"
 #include "Horario.hpp"
-#include "Materia.hpp"
 
 using namespace std;
 
@@ -16,7 +15,7 @@ class Materia {
 	public:
 		Materia(string n = "", int c = 0);
 		string getNombre();
-		vector<Grupo> getGrupos();
+		void agregarGrupo(Grupo &gr);
 		int getCodigo();
 		bool operator ==(Materia &otro);
 		bool operator <(const Materia &otro) const {
