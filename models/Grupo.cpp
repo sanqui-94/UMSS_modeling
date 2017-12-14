@@ -8,7 +8,11 @@ string Grupo::getNombre() {
 	return nombre;
 }
 
-vector<Horario> choqueDeHorarios(Grupo &otro) {
+void Grupo::agregarHorario(Horario horario) {
+	horarios.push_back(horario);
+}
+
+vector<Horario> Grupo::choqueDeHorarios(Grupo &otro) {
 	vector<Horario> choques;
 	for(vector<Horario>::iterator it = horarios.begin(); it != horarios.end(); ++it) {
 		for(vector<Horario>::iterator it2 = otro.horarios.begin(); it2 != otro.horarios.end(); ++it2) {
