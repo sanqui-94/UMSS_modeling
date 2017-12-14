@@ -5,23 +5,26 @@
 #include "Grupo.hpp"
 #include "Horario.hpp"
 
+typedef vector<Grupo> Grupos;
+typedef vector<Horario> Horarios;
+
 using namespace std;
 
 class Materia {
 	private:
 		int codigo;
 		string nombre;
-		vector<Grupo> grupos;
+		Grupos grupos;
 	public:
 		Materia(string n = "", int c = 0);
 		string getNombre();
 		void agregarGrupo(Grupo &gr);
 		int getCodigo();
-		bool operator ==(const Materia &otro);
+		bool operator ==(Materia &otro);
 		bool operator <(const Materia &otro) const {
 			return codigo < otro.codigo;
 		}
-		vector<Horario> existeChoques(Materia &otra);
+		Horarios existeChoques(Materia &otra);
 };
 
 #endif
