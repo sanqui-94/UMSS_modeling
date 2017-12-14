@@ -1,7 +1,7 @@
 #ifndef MALLA_HPP
 #define MALLA_HPP 1
 
-#include "Materia.cpp"
+#include "Materia.hpp"
 #include <set>
 #include <map>
 
