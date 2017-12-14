@@ -8,10 +8,10 @@ Horario::Horario(string ds, int hi, int hf) {
 
 bool Horario::tieneChoque(Horario &otro) {
 	bool existeChoque = false;
-	if(diaSemana.compare(otro.diaSemana)) {
-		existeChoque = 	(horaInicio > otro.horaFin && otro.horaFin < horaFin) ||
-						(horaInicio > otro.horaInicio && otro.horaInicio < horaFin) ||
-						(horaInicio == otro.horaFin && horaFin == otro.horaFin);
+	if(diaSemana.compare(otro.diaSemana) == 0) {
+		existeChoque = 	(otro.horaFin > horaInicio && otro.horaFin < horaFin) ||
+						(otro.horaInicio > horaInicio && otro.horaInicio < horaFin) ||
+						(horaInicio == otro.horaInicio && horaFin == otro.horaFin);
 			
 	}
 	return existeChoque;
