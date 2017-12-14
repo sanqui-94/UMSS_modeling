@@ -5,7 +5,6 @@ using namespace std;
 #include "models/Carrera.cpp"
 #include "models/Departamento.cpp"
 #include "models/Facultad.cpp"
-#include "models/Materia.cpp"
 #include "models/Horario.cpp"
 #include "models/Grupo.cpp"
 
@@ -34,11 +33,18 @@ int main() {
 	grupo3.agregarHorario(h6);
 
 	Horario h7("lunes", 1, 3);
-	Horario h8("martes", 3, 5);
+	Horario h8("martes", 6, 8);
 
 	Grupo grupo4("grupo4");
 	grupo4.agregarHorario(h7);
 	grupo4.agregarHorario(h8);
+
+	Horario h9("lunes", 1, 3);
+	Horario h10("martes", 6, 8);
+
+	Grupo grupo5("grupo5");
+	grupo5.agregarHorario(h9);
+	grupo5.agregarHorario(h10);	
 
 	if(h1.tieneChoque(h2)) {
 		cout<<"Tiene\n";
@@ -69,6 +75,15 @@ int main() {
 	} else {
 		cout<<"No Tiene\n";
 	}
+
+	cout<<(grupo1.choqueDeHorarios(grupo2)).size()<<"\n";
+	cout<<(grupo1.choqueDeHorarios(grupo3)).size()<<"\n";
+	cout<<(grupo1.choqueDeHorarios(grupo4)).size()<<"\n";
+	cout<<(grupo4.choqueDeHorarios(grupo5)).size()<<"\n";
+
+
+	Materia m1("intro a la progra", 2010010);
+	Materia m2("elementos", 2010011);
 
     /*Facultad f1("Ciencia y Tecnología");    
     cout << f1.getNombre() << endl;

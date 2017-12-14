@@ -9,9 +9,9 @@ string Carrera::getNombre() {
     return nombre;
 }
 
-Malla Carrera::getMalla() {
+/*Malla Carrera::getMalla() {
 	return malla;
-}
+}*/
 
 vector<Materia> Carrera::getMaterias() {
 	return materias;

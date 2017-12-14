@@ -6,7 +6,7 @@
 
 class Carrera{
     private:
-    	Malla malla;
+    	//Malla malla;
         string nombre;
         vector<Materia> materias;
     public:
