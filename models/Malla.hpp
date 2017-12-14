@@ -5,14 +5,18 @@
 #include <set>
 #include <map>
 
+typedef vector<Materia> materias;
+typedef string Nivel;
+typedef pair<Nivel, materias> preRequisitos;
+
 class Malla {
 	private:
-		map<Materia, pair<string, vector<Materia> > > malla;
-		void visit(const Materia &u, set<Materia> &visitados, vector<Materia> &res);
+		map<Materia, preRequisitos> malla;
+		void visit(const Materia &u, set<Materia> &visitados, materias &res);
 	public:
-		Malla(map<Materia, pair <string, vector<Materia> > > m );
-		vector<Materia> toposort();
-		bool tieneChoques(string nivel);
+		Malla(map<Materia, preRequisitos> m );
+		materias toposort();
+		bool tieneChoques(Nivel nivel);
 };
 
 #endif

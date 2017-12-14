@@ -2,10 +2,6 @@
 #include <iostream>
 #include "Malla.hpp"
 
-typedef vector<Materia> materias;
-typedef string Nivel;
-typedef pair<Nivel, materias> preRequisitos;
-
 Malla::Malla(map<Materia, pair<string, vector<Materia> > > m){
 	malla = m;
 }
@@ -22,7 +18,7 @@ materias Malla::toposort() {
 	return res;
 }
 
-void Malla::visit(const Materia &u, set<Materia> &visitados, vector<Materia> &res) {
+void Malla::visit(const Materia &u, set<Materia> &visitados, materias &res) {
 	visitados.insert(u);
 	for (Materia &v : malla[u].second)	{  
 		if (visitados.find(v) == visitados.end()) {
