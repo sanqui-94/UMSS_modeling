@@ -1,15 +1,20 @@
 #include <set>
+#include <iostream>
 #include "Malla.hpp"
+
+typedef vector<Materia> materias;
+typedef string Nivel;
+typedef pair<Nivel, materias> preRequisitos;
 
 Malla::Malla(map<Materia, pair<string, vector<Materia> > > m){
 	malla = m;
 }
 
-vector<Materia> Malla::toposort() {
+materias Malla::toposort() {
 	int vs = malla.size();
 	set<Materia> visitado;
 	vector<Materia> res;
-	for (map<Materia, pair<string, vector<Materia> > >::iterator it = malla.begin(); it != malla.end(); ++it)	{
+	for (map<Materia, preRequisitos >::iterator it = malla.begin(); it != malla.end(); ++it)	{
 		if (visitado.find(it->first) == visitado.end()) {
 			visit(it->first, visitado, res);
 		}
@@ -27,16 +32,15 @@ void Malla::visit(const Materia &u, set<Materia> &visitados, vector<Materia> &re
 	res.push_back(u);
 }
 
-bool Malla::tieneChoques(string nivel) {
-	bool res = true;
-	for (map<Materia, pair <string, vector<Materia> > >::iterator it = malla.begin(); it != malla.end(); ++it) {
-		if( nivel.compare((it->second).first) != 0) {
-			vector<Materia> materias = (it->second).second;
-			for (vector<Materia>::iterator it2 = materias.begin(); it2 != materias.end(); ++it2) {
-				for (vector<Materia>::iterator it3 = materias.begin(); it3 != materias.end(); ++it3) {
-					if(!(*it2 == *it3)) {
-						res = res && ((it2->existeChoques(*it3)).size() > 0);
-					}
+bool Malla::tieneChoques(Nivel nivel) {
+	bool res = false;
+	for (map<Materia, preRequisitos >::iterator it = malla.begin(); it != malla.end(); ++it) {
+		if( nivel.compare((it->second).first) == 0) {
+			Materia actual = (it->first);
+			for (map<Materia, preRequisitos >::iterator it2 = malla.begin(); it2 != malla.end(); ++it2) {
+				Materia siguiente = (it2->first);
+				if( !( actual == siguiente ) &&  (nivel.compare((it2->second).first) == 0) ) {
+					res = res || (actual.existeChoques(siguiente).size() > 0);
 				}
 			}
 		}
